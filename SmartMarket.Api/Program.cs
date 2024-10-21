@@ -54,9 +54,6 @@ public class Program
                  options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
              });
 
-
-
-
         var app = builder.Build();
 
         WebHostEnviromentHelper.WebRootPath = Path.GetFullPath("wwwroot");
@@ -81,7 +78,7 @@ public class Program
         app.UseAuthentication();
         app.UseAuthorization();
 
-
+        app.Urls.Add("http://127.0.0.1:44315");
         app.MapControllers();
 
         app.Run();
