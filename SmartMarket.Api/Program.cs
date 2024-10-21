@@ -78,7 +78,7 @@ public class Program
         app.UseAuthentication();
         app.UseAuthorization();
 
-        app.Urls.Add("http://127.0.0.1:5000");
+        app.Urls.Add("http://127.0.0.1:45354");
         app.MapControllers();
 
         app.Run();
