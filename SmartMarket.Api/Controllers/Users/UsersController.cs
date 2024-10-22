@@ -18,6 +18,7 @@ namespace SmartMarket.Api.Controllers.Users
             _userService = userService;
         }
 
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> InsertAsync([FromForm] UserForCreationDto dto)
             => Ok(new Response
